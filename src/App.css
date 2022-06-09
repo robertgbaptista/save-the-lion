@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+
+/* Home Component */
+#home {
+    background-image: url("https://user-images.githubusercontent.com/65358991/172683650-f9069796-42d3-401c-b6fe-6eb0be14e2ab.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 46% 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#home .container {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: var(--green);
+    padding: 60px;
+    width: 100%;
+    max-width: 1025px;
+    height: auto;
+    bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-title {
+    letter-spacing: .04em;
+    line-height: 1.074em;
+    margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home-text {
+    letter-spacing: .04em;
+    line-height: 1.055em;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 640px), (max-height: 420px) {
+    #home .container {
+        padding: 40px;
+    }
+
+    .home-title {
+        font-size: 42px;
+        line-height: 1.043em;
+    }
+
+    .home-text {
+        font-size: 24px;
+        line-height: 1.024em;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 360px) {
+    .home-title {
+        font-size: 38px;
+    }
+}
+
+
+/* Navbar */
+nav {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    z-index: 100;
+}
+
+nav .nav-container {
+    display: flex;
 }
