@@ -64,7 +64,7 @@ nav {
     left: 0;
     width: 100%;
     height: auto;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     z-index: 100;
@@ -72,4 +72,131 @@ nav {
 
 nav .nav-container {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+}
+
+nav .nav-container ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 20px 36px;
+}
+
+nav .nav-container ul li {
+    list-style: none;
+}
+
+nav .nav-container ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+    letter-spacing: .050em;
+    line-height: 1.018em;
+    margin-right: 80px;
+}
+
+nav .isActive {
+    color: var(--green) !important;
+}
+
+nav .nav-container ul li a:hover {
+    color: var(--green);
+}
+
+nav .nav-container hr {
+    width: 70%;
+    max-width: 800px;
+    background-color: var(--black);
+    height: 3px;
+}
+
+nav .btn-container {
+    padding: 0 40px 0 0;
+}
+
+nav .btn-container .hamburger-menu,
+nav .mobile-line {
+    display: none;
+}
+
+nav .donate-btn {
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: 700;
+    padding: 21px 43px;
+    border: none;
+    filter: drop-shadow(2px 4px 8px #565959);
+}
+
+nav .donate-btn:active {
+    filter: none;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .nav-container {
+        padding: 40px 40px 20px 40px;
+    }
+
+    nav .btn-container {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0 0 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .nav-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .nav-container hr {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    nav .nav-container {
+        display: none;
+    }
+
+    nav .btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav .btn-container .hamburger-menu {
+        display: block;
+        height: 30px;
+        width: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .hamburger-menu .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: var(--black);
+    }
+
+    nav .mobile-line {
+        display: flex;
+        width: 80%;
+        background-color: var(--black);
+        height: 3px;
+    }
 }
