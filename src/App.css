@@ -67,7 +67,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    z-index: 100;
+    z-index: 10;
 }
 
 nav .nav-container {
@@ -173,24 +173,11 @@ nav .donate-btn:active {
         justify-content: space-evenly;
         align-items: center;
         padding: 20px;
+        z-index: 12;
     }
 
     nav .btn-container .hamburger-menu {
-        display: block;
-        height: 30px;
-        width: 36px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    nav .hamburger-menu .line {
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 10px;
-        background: var(--black);
     }
 
     nav .mobile-line {
@@ -198,5 +185,28 @@ nav .donate-btn:active {
         width: 80%;
         background-color: var(--black);
         height: 3px;
+        z-index: 12;
+    }
+
+    nav .overlay-menu {
+        position: absolute;
+        top: 0;
+        background-color: #f2f2f2;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .overlay-menu a {
+        padding: 40px 0;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: .040em;
+        line-height: .037em;
+        color: var(--gray);
+        text-decoration: none;
     }
 }
